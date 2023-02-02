@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Bookstore>
+<Book>
+<Title >BookTitle1</Title>
+<Author>AuthorName1</Author>
+<Year>2005</Year>
+<Price>35.00</Price>
+</Book>
+<Book>
+<Title>BookTitle2</Title>
+<Author>AuthorName2</Author>
+<Year>2007</Year>
+<Price>30.00</Price>
+</Book>
+<Book>
+<Title>BookTitle3</Title>
+<Author>AuthorName3</Author>
+<Year>2006</Year>
+<Price>50.00</Price>
+</Book>
+<Book>
+<Title>BookTitle4</Title>
+<Author>AuthorName4</Author>
+<Year>2005</Year>
+<Price>40.00</Price>
+</Book>
+</Bookstore>

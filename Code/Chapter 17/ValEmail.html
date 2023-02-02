@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating E-mail</TITLE>
+<SCRIPT type="text/javascript">
+function validateEmail(thisform)
+{
+	var txtEmail=thisform.email.value;
+	var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
+	var n1=txtEmail.indexOf("@");
+	var n2=txtEmail.lastIndexOf(".");
+	if(txtEmail=="")
+	{
+		alert("Enter the Email address");
+		thisform.email.focus();
+		return false;
+	}
+	if(txtEmail.match(illegalChars))
+	{
+		alert("Invalid Email address");
+		thisform.email.focus();
+		return false;
+	}
+	if(n1<1 ||n2-n1<2)
+	{
+		alert("Invalid Email address");
+		thisform.email.focus();
+		return false;
+	}	
+		return true;	
+}
+</SCRIPT>
+</HEAD>
+<BODY >
+<FORM action="ValidEmail.html" onsubmit="return validateEmail(this)" 	method="Post">
+User Name:<INPUT type="text" name="uname"/><BR/>
+E-mail:<INPUT type="text" name="email"/>*<BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>	

@@ -1,0 +1,19 @@
+<? xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="local_namespace.xsl"?>
+<emp:employees xmlns:emp="http://kogentindia.com/emp" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<emp:name>
+	<emp:first>Ambrish</emp:first>
+	<emp:middle>Kumar</emp:middle>
+	<emp:last>Singh</emp:last>
+</emp:name>
+<emp:position>Java Programmer</emp:position>
+<emp:resume>
+	<xhtml:html>
+	<xhtml:head><xhtml:title>Resume of Ambrish Kumar Singh</xhtml:title></xhtml:head>
+<xhtml:body>
+	<xhtml:h1>Ambrish</xhtml:h1>
+	<xhtml:p>Ambrish is a Java Programmer</xhtml:p>
+	</xhtml:body>
+	</xhtml:html>
+</emp:resume>
+</emp:employees>

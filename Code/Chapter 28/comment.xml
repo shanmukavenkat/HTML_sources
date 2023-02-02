@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- <Person> is the root element-->
+<person>
+	<!-- <name> is the child element of <person>-->
+	<name>
+		<first_name>Petter</first_name>
+		<last_name>Smith</last_name>
+	</name>
+	<!-- <address> is the child element of <person>-->
+	<address>
+		<house_no>26</house_no>
+		<lane_no>12</lane_no>
+		<city>Delhi</city>
+		<state>Delhi</state>
+		<country>India</country>
+	</address>
+	<!-- <contact_no> is the child element of <person>-->
+	<contact_no>
+		<land_line>011454678</land_line>
+		<mobile>9897654351</mobile>
+	</contact_no>
+</person>

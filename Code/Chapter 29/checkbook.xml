@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE checkbook SYSTEM "checkbook.dtd">
+<checkbook>
+<deposit type="direct-deposit" xmlns="http://namespace.com/checkbook">
+<payor>Bob's Bolts</payor>
+<amount>987.32</amount>
+<date>21-6-00</date>
+<description category="income">Paycheck</description>
+</deposit>
+</checkbook>

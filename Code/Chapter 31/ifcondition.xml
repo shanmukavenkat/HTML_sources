@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<?xml-stylesheet type="text/xsl" href="ifcondition.xsl" ?>
+
+<namelist>
+   <name>Charu</name>
+   <name>Suchita</name>
+   <name>Umar</name>
+   <name>Manoj</name>
+
+   <name>Aarti</name>
+   <name>Anil</name>
+   <name>Ajay</name>
+   <name>Shersingh</name>
+   <name>Shilpa</name>
+   <name>Akanksha</name>
+
+</namelist>

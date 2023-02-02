@@ -1,0 +1,9 @@
+<!ELEMENT checkbook (deposit)*>
+<!ELEMENT deposit (payor, amount, date, description?)>
+<!ATTLIST deposit 
+type (cash|check|direct-deposit|transfer) #REQUIRED xmlns CDATA #FIXED 	"http://namespace.com/checkbook">
+<!ELEMENT amount (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT payor (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description category (cash|entertainment|food|income|work) 'food'>

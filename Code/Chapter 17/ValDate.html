@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating Date</TITLE>
+<SCRIPT type="text/javascript">
+function isDate(txtDate)
+{
+	var objDate;  
+	var mSeconds; 	
+	if (txtDate=="")  
+	{
+		alert("Please enter the Date"); 
+		return false;
+	}	
+	var day   = txtDate.substring(3,5);
+	var month = txtDate.substring(0,2)-1; 
+	var year  = txtDate.substring(6,10);
+	if (txtDate.substring(2,3) != '/')
+	{ 
+		alert("Please enter the Date in correct format"); 
+		return false;
+	}
+	if (txtDate.substring(5,6) != '/')
+	{
+		alert("Please enter the Date in correct format");  
+		return false;  
+	}  
+  mSeconds = (new Date(year, month, day)).getTime();
+  objDate = new Date();
+  objDate.setTime(mSeconds);	
+	if (objDate.getDate()!= day) 
+	{
+		alert("you have entered the wrong Day");    
+		return false;
+	}
+	if (objDate.getMonth()!= month) 
+	{
+		alert("you have entered the wrong month");  
+		return false;
+	}
+	if (objDate.getFullYear()!= year) 
+	{
+		alert("you have entered the wrong year");  
+		return false;
+	}	
+		return true;	
+}
+function checkDate(thisform)
+{
+	var txtDate = thisform.date.value;
+	if (isDate(txtDate)) 
+	return true;
+	else 
+	{		 
+		return false;
+	}
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="ValidDate.html" onsubmit="return checkDate(this)" method="Post">
+Enter Date(mm/dd/yyyy):<INPUT type="text" name="date"/><BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Singer BirthYear="1972" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 	xmlns="http://www.abc.com/Singer" xsi:schemaLocation="http://www.abc.com/Singer 	targetnamespacedemo.xsd">
+ <Name>
+  <Title>Mr.</Title>
+  <FirstName>Sonu</FirstName>
+  <LastName>Nigam</LastName>
+ </Name>
+</Singer>

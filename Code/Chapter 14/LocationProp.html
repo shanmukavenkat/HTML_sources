@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Location Object Example</TITLE>
+<SCRIPT language="JavaScript">
+<!--
+     function gotoPage() {
+       window.location.href = window.document.loc.ProtocolField.
+        options[window.document.loc.ProtocolField.selectedIndex].text
+        + document.loc.HostnameField.value + document.loc.PathnameField.value
+     }
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<p><H1> Enter a URL in the given sections</H1></P>
+<FORM name="loc" method="POST">
+<PRE>Protocol:    
+<SELECT name="ProtocolField" size=1>
+
+<OPTION>http://</option>
+<OPTION>file://</option>
+<OPTION>javascript:</option>
+<OPTION>ftp://</option>
+<OPTION>mailto:</option>
+</SELECT> 
+</PRE>
+<PRE>
+Hostname:              
+<INPUT type=text size=23 maxlength=256 name="HostnameField"  
+value="www.dreamtechpress.com"> 
+</PRE>
+<PRE>
+Pathname:
+<INPUT type=text size=20 maxlength=100 name="PathnameField" value="/">
+</PRE>
+<PRE> 
+<INPUT type=button name="Go" value="Go" onClick="gotoPage()">
+</PRE>
+</FORM>
+</BODY>
+</HTML>

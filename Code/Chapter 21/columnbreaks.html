@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE> Column Break </TITLE>
+</HEAD>
+<STYLE type="text/css">
+    #wrapper{
+        width: 30em;
+        height: 20em;
+        border: 3px double magenta;
+        margin: 80px auto;       
+
+       -webkit-column-count:5;
+         
+-webkit-column-rule: solid
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background: lime;
+        margin: 1px;
+
+        -webkit-column-break-after: always;
+
+    }
+
+</STYLE>
+<BODY>
+
+<DIV id="wrapper">
+    <DIV class="box">demo text demo text demo text demo text demo text demo text demo demo text demo text demo text demo text demo text demo text demo text text</DIV>
+    <DIV class="box">demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text </DIV>
+    <DIV class="box">demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text </DIV>
+    <DIV class="box">demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text </DIV>
+      <DIV class="box">demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text </DIV>
+<DIV class="box">demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text </DIV>
+<DIV class="box">demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text demo text</DIV>  
+  </DIV>
+</BODY>
+</HTML>

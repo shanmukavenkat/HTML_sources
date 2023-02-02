@@ -1,0 +1,21 @@
+<!ELEMENT collection (desc,drink*)>
+
+<!ELEMENT desc ANY>
+
+<!ELEMENT drink (name,ingre*,prep,nutri)>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT ingre (ingre*,prep)?>
+<!ATTLIST ingre name CDATA #REQUIRED
+			quant CDATA #IMPLIED
+			unit CDATA #IMPLIED>
+
+<!ELEMENT prep(step*)>
+<!ELEMENT step (#PCDATA)>
+
+<!ELEMENT nutri EMPTY>
+<!ATTLIST nutri protein CDATA #REQUIRED
+			carbohydrates CDATA #REQUIRED
+			fat CDATA #REQUIRED
+			calories CDATA #REQUIRED>

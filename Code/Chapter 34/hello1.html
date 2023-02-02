@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>Asynchronously Reading the File</TITLE>
+		<SCRIPT type="text/javascript">
+			function getXHR()
+			{	
+				var RequestObject;
+				if (window.XMLHttpRequest) {
+					RequestObject = new XMLHttpRequest();
+					} else if (window.ActiveXObject)
+				{
+					RequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return RequestObject;
+			}
+			function hello1() { 
+				var request = getXHR(); 
+				request.open("Get","helloAjax.xml",true); 
+				request.onreadystatechange=function() {
+				if(request.readyState==4) {
+					document.getElementById('img1').src="tick.jpg";
+					document.getElementById('img1').alt = "The response has been received.....";
+					if(request.status==200) { 
+						var nodes=request.responseXML.getElementsByTagName("name");
+						for (i=0; i<nodes.length; i++) {
+							document.getElementById('message').innerHTML += '<b>' + nodes[i].firstChild.nodeValue + '</b><br/>';
+						}
+					} 
+					else { 
+						alert ("Request failed"); 
+					} 
+				}
+				else {
+					document.getElementById('img1').src = "progressbar.gif";
+					alert(request.readyState);
+					}
+				}
+				request.send(null); 
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<H1>Asynchronously Reading the File</H1>
+
+		<INPUT type="button" value="Click Me" onclick="hello1()"/>
+		<P>
+			<IMG id="img1" alt="CLICK the above button to asynchronously read an XML File"></IMG>
+		</P>
+		<DIV id="message"></DIV>
+	</BODY>
+</HTML>

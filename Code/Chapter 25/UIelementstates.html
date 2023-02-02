@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<HTML>
+  <HEAD>
+    <TITLE>UI element states</TITLE>
+    <STYLE type="text/css">
+      button.style {
+        background-color: lime;
+      }
+      button.style:disabled 
+	    {
+        background-color: magenta;
+        color: white;
+      }
+      button.style:enabled 
+      {
+        background-color: blue;
+        color: yellow;
+      }
+      span 
+      {
+        background-color: orange;
+      }
+      input:checked + span 
+      {
+        background-color: green;
+        color: white;
+      }
+      input:indeterminate + span 
+      {
+        background-color: red;
+      }
+
+    </STYLE>
+  </HEAD>
+  <BODY>
+    <FORM action="#">
+
+      <P>Default style:</P>
+      <BUTTON disabled="disabled">disabled</BUTTON>
+      <BUTTON>enabled</BUTTON><BR />
+
+ 	 	<INPUT type="checkbox" checked="checked" />checked by default
+      <INPUT type="checkbox" />not checked by default<BR />
+  		<INPUT type="radio" checked="checked" />checked by default
+      <INPUT type="radio" />not checked by default<BR />   
+      <P>Using UI element states:</P>
+      <BUTTON class="style" disabled="disabled">disabled</BUTTON>
+      <BUTTON class="style">enabled</BUTTON><BR />
+      <INPUT type="checkbox" checked="checked" /><SPAN>checked by default</SPAN>
+      <INPUT type="checkbox" /><span>not checked by default</SPAN><BR />
+  		<INPUT type="radio" checked="checked" /><SPAN>checked by default</SPAN>
+      <INPUT type="radio" /><SPAN>not checked by default</SPAN><BR />
+
+      <INPUT type="checkbox" id="here" /><SPAN>Made indeterminate by 				scripting</SPAN>
+    </FORM>
+
+    <SCRIPT type="text/javascript">
+      window.onload = function() {
+        document.getElementById("here").indeterminate = true;
+      }
+    </SCRIPT>
+  </BODY>
+</HTML>	

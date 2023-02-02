@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Employee>
+	<FirstName>Ram</FirstName>
+	<MiddleName>Prasad</MiddleName>
+	<LastName>Singh</LastName>
+	<Age>25</Age>	
+</Employee>

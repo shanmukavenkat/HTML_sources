@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>Dynamically Filling Lists</TITLE>
+<SCRIPT type="text/javascript">
+	var xmlHttp;
+	function createXMLHttpRequest() {
+		if (window.ActiveXObject) {
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		else if (window.XMLHttpRequest) {
+			xmlHttp = new XMLHttpRequest();
+		}
+	}
+	
+	function refreshCatList() {
+		var cat = document.getElementById("cat").value;
+		if(cat == "") {
+			clearCatsList();
+			return;
+		}
+		var url = "RefreshCatListServlet?"+ createQueryString(cat);
+		createXMLHttpRequest();
+		xmlHttp.onreadystatechange = handleStateChange;
+		xmlHttp.open("GET", url, true);
+		xmlHttp.send(null);
+	}
+	function createQueryString(cat) {
+		var queryString = "cat=" + cat;
+		return queryString;
+	}
+	function handleStateChange() {
+		if(xmlHttp.readyState == 4) {
+			if(xmlHttp.status == 200) {
+				updateCatsList();
+			}
+		}
+	}
+	function updateCatsList() {
+		clearCatsList();
+		var subcats = document.getElementById("subcats");
+		var results = xmlHttp.responseXML.getElementsByTagName("subcat");
+		var option = null;
+		for(var i = 0; i < results.length; i++) {
+			option = document.createElement("option");
+			option.appendChild(document.createTextNode(results[i].
+			 firstChild.nodeValue));
+			subcats.appendChild(option); }
+	}
+	function clearCatsList() {
+		var subcats = document.getElementById("subcats");
+		while(subcats.childNodes.length > 0) {
+			subcats.removeChild(subcats.childNodes[0]); }
+	}
+	</SCRIPT>
+</HEAD>
+<BODY>
+<H1>Select Category</H1>
+<BR/><BR/>
+<SPAN style="font-weight:bold;">Category:</SPAN>
+<SELECT id="cat" onchange="refreshCatList();">
+<OPTION value="">Select One</OPTION>
+<OPTION value="PL">PL</OPTION>
+<OPTION value="Furniture">Furniture</OPTION>
+<OPTION value="Clothes">Clothes</OPTION>
+</SELECT>
+<BR/><BR/>
+<SPAN style="font-weight:bold;">Subcats:</SPAN>
+<BR/>
+<SELECT id="subcats" size="6" style="width: 300px;">
+</SELECT>
+</FORM>
+</BODY>
+</HTML>

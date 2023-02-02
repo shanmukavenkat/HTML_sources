@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<?xml-stylesheet type="text/xsl" href="round.xsl"?>
+<DelhiTemperature Units="Fahrenheit">
+<Monday>Text</Monday>
+<Tuesday>68.1</Tuesday>
+<Wednesday>64.9</Wednesday>
+<Thursday>71.0</Thursday>
+<Friday>65.4</Friday>
+</DelhiTemperature>

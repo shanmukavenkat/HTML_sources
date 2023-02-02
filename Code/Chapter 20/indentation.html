@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>text-indent</TITLE>
+		<STYLE>
+			.foo1 {text-indent: 2in}
+			.foo2 {text-indent: 2px}
+			.foo3 {text-indent: 2cem}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<H1 class="foo1">This header is indented by 2 inches.</H1>
+		<H1 class="foo2">This header is indented by 2 pixel.</H1>
+		<H1 class="foo3">This header is indented by 2 cem.</H1>
+		<P style="text-indent: 20%">The first line of text in this paragraph is indented by 20% of the browser window's width.
+		</P>
+		<P>
+			Some text. <span class="foo1">This line of text is 
+			not indented, as text-indent property does not
+			apply to inline elements that are not the beginning of a line.
+		</P>
+		<P style="text-indent: -2in">The first words in this text do not appear onscreen, as text-indent is set to a value of -1 inch.
+		</P>
+	</BODY>
+</HTML> 

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating Numbers</TITLE>
+<SCRIPT type="text/javascript">
+function validateNum(thisform)
+{	
+      var num = thisform.num.value;
+	if(num==null|| num=="")
+	{
+		alert("enter the number");
+		thisform.num.focus();
+		return false;
+	}
+	if(isNaN(num))
+	{
+		alert("it’s not a valid number");
+		thisform.num.focus();
+		return false;
+	}	
+	return true;	
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="NumberValidated.html" onsubmit="return validateNum(this)" 	method="Post">
+Enter Number:<INPUT type="text" name="num"/><BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>

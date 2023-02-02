@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating Time</TITLE>
+<SCRIPT type="text/javascript">
+function validateZipCode(thisform)
+{
+	var zipCode = thisform.zCode.value;
+	var c= zipCode.substring(0,1);
+	
+	if (zipCode=="")
+	{
+		alert ("Enter the six digit zip code number");
+		thisform.zCode.focus();
+		return false;
+	}
+
+	if (isNaN(zipCode))
+	{
+		alert ("zip code must be an integer value");
+		thisform.zCode.focus();
+		return false;
+	}	
+	if (zipCode.length!=6)
+	{
+		alert ("zip code must be of six digits");
+		thisform.zCode.focus();
+		return false;
+	}
+	if(c==0 || c==9)
+	{
+		alert ("not a valid zip code");
+		thisform.zCode.focus();
+		return false;
+	}
+	
+	return true;	
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="ValidZip.html" onsubmit="return validateZipCode(this)" 	method="Post">
+Enter Zip Code :<INPUT type="text" name="zCode"/><BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>

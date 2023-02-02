@@ -1,0 +1,43 @@
+<HTML>
+<HEAD> 
+<TITLE>jQuery select a radio button example</TITLE> 
+<SCRIPT type="text/javascript" src="jquery-1.5.js"></SCRIPT> 
+</HEAD> 
+<BODY> 
+<H1>I think, therefore I am</H1>
+<H2>Select a radio button if you agree with the above statement:</H2> 
+<SCRIPT type="text/javascript"> 
+  $(document).ready(function(){ 
+    $("#isSelect").click(function () { 
+	alert($('input:radio[name=choice]:checked').val()); 
+    }); 
+    $("#selectYes").click(function () { 
+	$('input:radio[name=choice]:nth(0)').attr('checked',true);
+	//$('input:radio[name=choice]')[0].checked = true; 
+    }); 
+    $("#selectNo").click(function () { 
+	$('input:radio[name=choice]:nth(1)').attr('checked',true);
+	//$('input:radio[name=choice]')[1].checked = true; 
+    }); 
+    $("#selectConfused").click(function () { 
+	$('input:radio[name=choice]:nth(2)').attr('checked',true);
+	//$('input:radio[name=choice]')[2].checked = true; 
+    }); 
+    $("#reset").click(function () { 
+	$('input:radio[name=choice]').attr('checked',false); 
+    });
+   });
+</SCRIPT>
+<INPUT type="radio" name="choice" value="Yes">Yes</INPUT>
+<INPUT type="radio" name="choice" value="No">No</INPUT>
+<INPUT type="radio" name="choice" value="Confused">Confused</INPUT>
+ <BR/>
+<BR/>
+<BR/>
+ <INPUT type='button' value='Display Selected' id='isSelect'>
+<INPUT type='button' value='Yes' id='selectYes'>
+<INPUT type='button' value='No' id='selectNo'>
+<INPUT type='button' value='Confused' id='selectConfused'>
+<INPUT type='button' value='Reset' id='reset'>
+ </BODY>
+</HTML>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<birdbreeds>
+
+<bird breed="Diamond Dove" id="Diamond Dove">
+<picture url="http://animal.com/Dove.gif"/>
+
+<description>Diamond Dove There are many varieties of the dove that vary in color. 	Some of the more popular varieties of dove are: Ring-Neck  	Dove - A grey colored dove with a dark ring around its neck…..
+</description>
+
+<Feeding> A dove's metabolism is very active and can starve to death in as little 	as 24 hours if it does not eat. Doves should eat a staple  	diet of fresh fortified finch seed, parakeet seed or pellet daily. Doves only 	eat off the top of what is offered, so be sure to check the food  	daily.....
+</Feeding>
+
+</bird>
+<bird breed="Cockatiels" id="Cockatiels">
+<picture url="http://animal.com/Cockatiels.gif"/>
+
+<description> Grey Cockatiel If properly cared for, a cockatiel can live up to 	thirty years. This is a smaller member of the parrot family…… 	</description>
+
+<Feeding>Cockatiels should eat a staple diet of fresh fortified cockatiel seed or 	pellet daily. Cockatiels only eat off the top of what is  	offered, so be sure to check the food daily. Besides a variety of seed mix or 	pellet, offer chopped dark green and yellow vegetables and a  	variety of fresh fruits in addition to a protein source like mature legumes, 	hard 	cooked chopped egg, and grated cheese…….
+</Feeding>
+</bird>
+</birdbreeds>

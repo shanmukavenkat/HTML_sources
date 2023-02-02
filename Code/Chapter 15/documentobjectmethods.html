@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+	<HEAD>
+    <TITLE>Document object methods</TITLE>
+   
+<SCRIPT type="text/javascript">
+
+	function getElement()
+	{
+		newwin=window.open("") 
+		newwin.document.open() 
+		var abc=document.getElementsByName("nm")
+	
+		newwin.document.write("Your name length is : "+abc.length)
+		newwin.document.close()
+				
+	}
+    
+    </SCRIPT>
+
+  </HEAD>
+  <BODY>
+  <H1>Using the Methods of the Document Object</H1>
+		<B>Enter first name:</B><input name="nm" "type="text" size="15"><BR/>
+		<B>Enter second name:</B><input name="nm" "type="text" size="15"><BR/>
+		<B>Enter third name:</B><input name="nm" "type="text" size="15"><BR/>
+	
+		<INPUT type="button" onClick="getElement()" value="Name length">
+  </BODY>
+
+</HTML>

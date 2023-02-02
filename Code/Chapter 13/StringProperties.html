@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>String Properties Demo</TITLE>
+</HEAD>
+<BODY>
+<SCRIPT type="text/javascript">
+function employee(name,jobtitle,salary)
+{
+this.name=name;
+this.jobtitle=jobtitle;
+this.salary=salary;
+}
+var emp1=new employee("Nilima Aahuja","Technical writer",10000);
+document.write("Name : "+emp1.name+ "<BR/> Designation : "+emp1.jobtitle+"<BR/>  Salary : Rs."+emp1.salary);
+
+document.write("<BR/> --------------------<BR/>");
+var emp2=new employee("Shilpa Verma","HR manager",40000);
+employee.prototype.doj=2007;
+document.write("Name : "+emp2.name+"<BR/> Designation : "+emp2.jobtitle+"<BR/>  Date of Joining : "+emp2.doj+"<BR/>Salary : Rs."+emp2.salary);
+</SCRIPT>
+</BODY>
+</HTML>

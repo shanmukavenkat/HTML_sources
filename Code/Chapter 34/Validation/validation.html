@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<TITLE>Using Ajax for validation</TITLE>
+		<SCRIPT type="text/javascript">
+			var xmlHttp;
+			function createXMLHttpRequest() {
+				if (window.ActiveXObject) {
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				else if (window.XMLHttpRequest) {
+					xmlHttp = new XMLHttpRequest();
+				}
+			}
+			function validate() {
+				createXMLHttpRequest();
+				var number = document.getElementById("number");
+				var url = "ValidationServlet?number=" + escape(number.value);
+				xmlHttp.open("GET", url, true);
+				xmlHttp.onreadystatechange = callback;
+				xmlHttp.send(null);
+			}
+			function callback() {
+				if (xmlHttp.readyState == 4) {
+					if (xmlHttp.status == 200) {
+						var mes =
+						xmlHttp.responseXML
+						.getElementsByTagName("message")[0].firstChild.data;
+						var val =
+						xmlHttp.responseXML
+						.getElementsByTagName("passed")[0].firstChild.data;
+						setMessage(mes, val);
+					}
+				}
+			}
+			function setMessage(message, isValid) {
+				var messageArea = document.getElementById("numMessage");
+				var fontColor="red";
+				if (isValid == "true") {
+					fontColor = "green";
+				}
+				messageArea.innerHTML = "<font color=" + fontColor + ">"+ message + " </font>";
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<H1>Ajax Validation Example</H1>
+		Number: <INPUT type="text" size="10" id="number" onchange="validate();"/>
+		<DIV id=numMessage>
+	</BODY>
+</HTML>

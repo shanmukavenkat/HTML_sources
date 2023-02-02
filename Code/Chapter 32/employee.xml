@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<company xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<employee name="John">
+  <description
+  xlink:type="simple"
+  xlink:href="http://kogent.com/images/John.gif"
+  xlink:show="new">
+  John has joined kogent five years back. Now, he is in the board of directors. He 	has done his MS from Oxford university......
+  </description>
+</employee>
+
+<employee name ="Lisa">
+  <description
+  xlink:type="simple"
+  xlink:href="http://kogent.com/images/Lisa.gif"
+  xlink:show="new">
+
+ 	Lisa has joined kogent ten years back. Now, she is the vice president sales of 	the company. She has done her studies from the university of Virginia.......
+  </description>
+
+</employee>
+</company>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<head>
+	
+	<title>Curtain animation</title>
+	<script type="text/javascript" src='js/jquery-1.5.js'></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			
+			
+			$('.curtain_wrapper').click(function(){
+				
+				
+				$(this).children('.description').animate({'left': -1*$(this).width()});
+				
+				$(this).children('img.curtain').animate({ width: 50 },{duration: 2000});
+				
+				$(this).children('.content').fadeIn(2000);
+				
+			});
+			
+		});
+	</script>
+	<style type="text/css" media="screen">
+		
+		img.curtain{
+			height:300px; 
+			z-index:99; 
+		}
+		
+		
+		img.curtainLeft{
+			position:absolute; 
+			left:0px; 
+		}
+		
+		
+		img.curtainRight{
+			position:absolute; 
+			right:0px; 
+		}
+		
+		
+		.curtain_wrapper{
+			width:400px; 
+			height:300px; 
+			position:relative; 
+			overflow:hidden; 
+			color:red; 
+			background:black; 
+			
+		}
+		
+		
+		.content{
+			position:relative; 
+			width: 300px; 
+			margin:0px auto; 
+			display:none; 
+		}		
+		
+		.description{
+			position:absolute; 
+			top:140px; 
+			left:100px;
+			z-index:100; 			
+			padding:5px; 
+			text-align:center;
+			font-size:15px;
+			background:skyblue;
+			border:1px solid #ccc;
+			border-left:0px;
+			border-top:0px;
+			color:black;
+		}
+	</style>
+	<style type="text/css" media="screen">
+		body{ font-family: 'tahoma' }
+		h4, p { padding-left:5px; padding-right:5px; }
+		p { font-size:14px; }
+	</style>
+</head>
+<body>
+	
+
+<div class='curtain_wrapper'>
+	
+	<img class='curtain curtainLeft' src='images/curtainLeft.jpg' />
+    <img class='curtain curtainRight' src='images/curtainRight.jpg' />    
+    
+	<div class='content'>
+		
+		<h3>Curtain effect	</h3>
+        <p>
+        	You are watching curtain effects in jQuery
+        </p>
+       
+    </div>
+   
+    
+    
+    <div class='description'>
+    	Click here to open the curtain
+    </div>
+    
+        
+
+</div>
+
+	
+</body>
+</html>

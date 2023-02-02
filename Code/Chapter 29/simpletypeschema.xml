@@ -1,0 +1,9 @@
+<dresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="simpletypeschema.xsd">
+  <size>06</size>
+
+  <mediumDressSize>12</mediumDressSize>
+  <smallDressSize>6</smallDressSize>
+  <eLargeSize>extra large</eLargeSize>  
+
+</dresses>

@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>the title</TITLE>
+   <SCRIPT type="text/javascript" src="jquery-1.5.js"></SCRIPT>
+   <SCRIPT type="text/javascript" language="javascript">   
+   $(document).ready(function() {    
+$("div.div1").click(function () {
+       $(this).remove( );
+    });
+$("div.div2").click(function () {
+       $(this).before('<div class="div2"></div>' );
+    });
+   });
+   </SCRIPT>
+   <STYLE>
+      div.div1{ margin:10px;padding:12px;
+             border:2px solid #666;
+             width:60px;
+           }
+div.div2{ margin:10px;padding:12px;
+             border:2px solid #666;
+             width:60px;
+           }
+  </STYLE>
+</HEAD>
+<BODY>
+   <P>Click on any square below to remove it</P>
+   <SPAN id="result"> </span>
+   <DIV class="div1" style="background-color:lightblue;"></DIV>
+   <DIV class="div1" style="background-color:lightgreen;"></DIV>
+<P>Click on any square to add an empty square before it</P>   
+   <DIV class="div2" style="background-color:pink;"></DIV>
+<DIV class="div2" style="background-color:yellow;"></DIV>
+</BODY>
+</HTML>

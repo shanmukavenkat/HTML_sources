@@ -1,0 +1,42 @@
+<!DOCTYPE HTML> 
+ <HEAD>
+  <TITLE>:not() negation pseudo class test</TITLE>
+  <STYLE type="text/css">
+   p {
+    background: orange;
+    border: 1px solid #000;
+   }
+   :not(p) {
+    background: silver;
+    margin: 30px;
+   }
+   a {
+    background: magenta; 
+    color: blue;
+   }
+   a:not([href*=google]) {
+    background: green; 
+    color: white;
+   } 
+  </STYLE>
+  </HEAD>
+ <BODY>
+
+demo text demo text demo text demo text demo text demo text demo text demo text 
+demo text demo text demo text demo text demo text demo text demo text demo text 
+demo text demo text demo text demo text demo text demo text demo text demo text 
+
+<P>Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph 		Paragraph Paragraph Paragraph Paragraph Paragraph </P>
+    <UL>
+     <LI><A href="http://google.com">Google</A></LI>
+     <LI><A href="http://www.webmasterworld.com">WebmasterWorld</A></LI>
+     <LI><A href="http://google.co.uk">Google UK</A></LI>
+<LI><A href="http://www.rediff.com">Rediff</A></LI>
+<LI><A href="http://www.yahoo.com">Yahoo</A></LI>
+    </UL>
+
+demo text demo text demo text demo text demo text demo text demo text demo text 
+demo text demo text demo text demo text  
+<P>Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph 	Paragraph Paragraph Paragraph Paragraph  	</P>
+  </BODY>
+</HTML>	

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>Synchronously-Reading the File</TITLE>
+		<SCRIPT type="text/javascript">
+			function getXHR()
+			{
+				var RequestObject;
+				if (window.XMLHttpRequest)
+				{
+					RequestObject = new XMLHttpRequest();
+				}
+				else if (window.ActiveXObject)
+				{
+					RequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				return RequestObject;
+			}
+
+			function hello()
+			{ 
+				var requestObject = getXHR(); 
+				requestObject.open("Get","helloAjax.xml",false); 
+				requestObject.send(null); 
+				requestObject.onreadystatechange=function()
+				{
+					alert(requestObject.readyState);
+				}
+				if(requestObject.status==200)
+				{ 
+					document.getElementById('message').innerHTML= '<p>' + "The ready State of the XMLHttpRequest object is : " + requestObject.readyState + '</p><p>' ;
+					var nodes=requestObject.responseXML.getElementsByTagName("name");
+					for (i=0; i<nodes.length; i++)
+					{
+						document.getElementById('message').innerHTML += '<b>' + nodes[i].firstChild.nodeValue + '</b><br/>';
+					}
+				} 
+				else
+				{ 
+					alert ("Request failed"); 
+				} 
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<H1>Synchronously-Reading the File</H1>
+		<INPUT type="button" value="Click Me" onclick="hello()"/>
+		<P>
+		<H3>CLICK the button above to synchronously read the file</H3></P>
+		<DIV id="message"></DIV>
+	</BODY>
+</HTML>
+	

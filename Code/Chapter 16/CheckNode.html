@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>verifying the child node</TITLE>
+		<SCRIPT type="text/javascript">
+
+			function checkNode(value)
+			{
+				var tag=document.getElementById(value);
+				if(tag.hasChildNodes())
+				{
+					alert("Node has child nodes");
+				}
+
+				else
+				{
+					alert("Node has no child nodes");
+				}		
+			}
+
+		</SCRIPT>
+	</HEAD>
+
+	<BODY id="T1">
+		<H1>Checking the Child Nodes</H1>
+		<H3> Welcome to the world of DOM</H3>
+		<P>Click this button to check the child nodes of the BODY Element:</P>
+		<INPUT type="button" onclick="checkNode('T1');" value="Check Child Node">
+
+		<P>Click this button to check the child nodes of the INPUT Element:</P>
+		<INPUT id="T2" type="button" onclick="checkNode('T2');" value="Check Child 			Node">
+	</BODY>
+
+</HTML>

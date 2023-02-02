@@ -1,0 +1,48 @@
+<!-- A SAMPLE set of  -->
+<!DOCTYPE  drink [
+<!ELEMENT collection (desc,drink*)>
+
+<!ELEMENT desc ANY>
+
+<!ELEMENT drink (name,ingre*,prep,nutri)>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT ingre (ingre*,prep)?>
+<!ATTLIST ingre name CDATA #REQUIRED
+			quant CDATA #IMPLIED
+			unit CDATA #IMPLIED>
+
+<!ELEMENT prep (step*)>
+<!ELEMENT step (#PCDATA)>
+
+<!ELEMENT nutri EMPTY>
+<!ATTLIST nutri protein CDATA #REQUIRED
+			carbohydrates CDATA #REQUIRED
+			fat CDATA #REQUIRED
+			calories CDATA #REQUIRED>
+
+]>
+<collection> 
+<desc>This XML document contains the procedure for creating Fruit Delight drink.</desc>    
+<drink>
+	<name>Fruit Delight</name> 
+	<ingredient name="Chopped Fresh Pineapple" amount="1 cup" unit="gram" /> 
+	<ingredient name="Mashed Ripe Banana" amount="3/4 cup"/> 
+	<ingredient name="Sugar" amount="10 spoons" unit="gram" /> 
+	<ingredient name="Ice" amount="12" unit="cube"/> 
+	<ingredient name="Lemon Juice" amount="1/2 cup" unit="cup" /> 
+	<ingredient name="Lemon Drink" amount="3/2 bottle" unit="ml" />
+	<ingredient name="Cherries" amount="1/2 spoon" unit="mg" /> 
+	<prep>
+		<step>Mix all finely chopped fruits.</step> 
+ 		<step>Blend these finely chopped fruits with sugar in a blender.</step> 
+		<step>Add lemon juice and crushed ice cubes to the fruit mix.</step> 
+		<step>Add lemon drink to the mixture to thin down to required liquidity.</step> 
+		<step>Blend all the ingredients to a smooth puree.</step>
+ 		<step>Pour the drink in a tall glass and garnish with pineapple wedges and 
+ 		cherries.</step>
+	</prep>
+	<nutri calories="126.05" fat="0.31g" carbohydrates="32.28g" protein="1.07g" />
+</drink>
+</collection>

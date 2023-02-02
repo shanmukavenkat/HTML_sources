@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Employees>
+Let&apos;s know the name, address, date of birth, &amp; date of join of the 	employee
+<Name> Petter Jones </Name> 
+<Address>house no 23, lane no 24, Daryaganj, Delhi </Address>
+<DOB>&lt;24/12/1987&gt;</DOB>
+<DOJ>&lt;23/1/2010&gt;</DOJ>
+</Employees>

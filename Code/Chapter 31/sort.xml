@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="sort.xsl" ?>
+<Values>
+  <Entry>
+     <value>100</value>
+     <char>AAA</char>
+   </Entry>
+   <Entry>
+     <value>200</value>
+     <char>BBB</char>
+   </Entry>
+   <Entry>
+     <value>300</value>
+     <char>CCC</char>
+   </Entry>
+ </Values> 

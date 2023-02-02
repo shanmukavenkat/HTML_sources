@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<HEAD>
+<SCRIPT type="text/javascript">
+var xmlParseDoc;
+function loadParseXML() 
+{
+	if (window.ActiveXObject) {
+		xmlParseDoc=new ActiveXObject("Microsoft.XMLDOM");
+		xmlParseDoc.async=false;
+		xmlParseDoc.load("emp.xml");
+		getmessage();
+	}
+	else if (document.implementation &&
+	document.implementation.createDocument) {
+		xmlParseDoc=document.implementation.createDocument("","",null);
+		xmlParseDoc.load("emp.xml");
+		xmlParseDoc.onload=getmessage;
+	} else {
+		alert('The Script is not Compatible with your Browser');
+	}
+}
+function getmessage() 
+{
+	document.getElementById("FirstName").innerHTML=
+	xmlParseDoc.getElementsByTagName("FirstName")[0].childNodes[0].nodeValue;
+	document.getElementById("MiddleName").innerHTML=
+	xmlParseDoc.getElementsByTagName("MiddleName")[0].childNodes[0].nodeValue;
+	document.getElementById("LastName").innerHTML=
+	xmlParseDoc.getElementsByTagName("LastName")[0].childNodes[0].nodeValue;
+	document.getElementById("Age").innerHTML=
+	xmlParseDoc.getElementsByTagName("Age")[0].childNodes[0].nodeValue;
+}
+</SCRIPT>
+</HEAD><BODY onload="loadParseXML()">
+<H1>Employee Details</H1>
+<P><B>First Name:</B> <span id="FirstName"></span><BR />
+<B>Middle Name:</B> <span id="MiddleName"></span><BR />
+<B>Last Name:</B> <span id="LastName"></span><BR />
+<B>Age:</B> <span id="Age"></SPAN>
+</P>
+</BODY>
+</HTML>

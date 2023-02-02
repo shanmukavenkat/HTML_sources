@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<HEAD>
+
+<TITLE>Validating phone number</TITLE>
+<SCRIPT type="text/javascript">
+function validatePhNum(thisform)
+{
+	var ph=thisform.phnum.value;
+	if(ph==null||ph=="")
+	{
+		alert("enter the phone number");
+		thisform.phnum.focus();	
+		return false;
+	}
+
+	if(ph.length<10)
+	{
+		alert("phone number must have atleast 10 digits");
+		thisform.phnum.focus();	
+		return false;
+	}
+
+	if(isNaN(ph))
+	{
+		alert("Invalid phone number");
+		thisform.phnum.focus();	
+		return false;
+	}
+		return true;
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="ValidPhone.html" onsubmit="return validatePhNum(this)" 	method="Post">
+Phone Number:<input type="text" name="phnum"/><BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>

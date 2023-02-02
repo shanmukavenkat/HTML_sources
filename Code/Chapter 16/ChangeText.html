@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>changing the text</TITLE>
+		<SCRIPT type="text/javascript">
+			function changeText()
+			{
+				document.getElementById("T1").innerHTML="Text is changed";
+				document.getElementById("B1").value="Clicked";
+			}
+		</SCRIPT>                    
+	</HEAD>
+	<BODY>
+		<H1>Changing the Text of the Elements</H1>
+		<P id="T1"> Click the button to change the text </P>
+		<INPUT id="B1" type= "button" onclick="changeText();" value="Click Me!">
+	</BODY>
+</HTML>

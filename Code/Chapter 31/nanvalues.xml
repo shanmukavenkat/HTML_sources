@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<?xml-stylesheet type="text/xsl" href="nanvalues.xsl" ?>
+<items>
+   <item>10</item>
+   <item>A10</item>
+<item>20</item>
+   <item>B20</item>
+<item>30</item>
+   <item>C30</item>
+<item>40</item>
+   <item>D40</item>
+</items>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Window Object Methods</TITLE>
+      <SCRIPT type="text/javascript">
+        var myWindow;
+function openCenteredWindow(url) 
+{
+    var width = 400;
+    var height = 300;
+    var windowFeatures = "width=" + width + ",height=" + height 	
+ 		+",status,resizable";
+    myWindow = window.open(url, "subWind", windowFeatures);
+}
+
+function show_alert()
+  {
+  alert("Hi!!! I am alert box");
+  }
+function resizeWindow()
+{
+    window.resizeBy(-100,-100)
+}
+function closeWindow()
+{
+ if (window.confirm("Do you want to close the browser?")) 
+     window.close();
+} 
+  </SCRIPT>
+   </HEAD>
+   <BODY>
+       <INPUT type="button" value="Open a New Window"  onclick="openCenteredWindow('WindowMethods.html')" />       
+ <INPUT type="button" value="Alert" onclick="show_alert()" />
+<INPUT type="button" onclick="resizeWindow()" value="Resize window">
+<INPUT type="button" onclick="closeWindow()" value="Close the window">
+</BODY>
+</HTML>

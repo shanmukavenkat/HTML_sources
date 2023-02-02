@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<HEAD>
+
+<TITLE>Detecting Browser Capabilities</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function displayNavigatorProperties() 
+{
+ with(document) 
+ {
+  write("<B>appName: </B>")
+  writeln(navigator.appName+"<BR>")
+  write("<B>appVersion: </B>")
+  writeln(navigator.appVersion+"<BR>")
+  write("<B>appCodeName: </B>")
+  writeln(navigator.appCodeName+"<BR>")
+  write("<B>platform: </B>")
+  writeln(navigator.platform+"<BR>")
+  write("<B>userAgent: </B>")
+  writeln(navigator.userAgent+"<BR>")  
+ }
+}
+function displayExplorerProperties() 
+{
+ with(document) 
+ {
+  write("<B>appName: </B>")
+  writeln(navigator.appName+"<BR>")
+  write("<B>appVersion: </B>")
+  writeln(navigator.appVersion+"<BR>")
+  
+  write("<B>appCodeName: </B>")
+  writeln(navigator.appCodeName+"<BR>")
+  write("<B>platform: </B>")
+  writeln(navigator.platform+"<BR>")
+  
+  write("<B>userAgent: </B>")
+  writeln(navigator.userAgent+"<BR>")
+  write("<B>cookieEnabled: </B>")
+  writeln(navigator.cookieEnabled+"<BR>")  
+ }
+}
+function displayBrowserProperties() 
+{
+ if(navigator.appName=="Netscape")
+  displayNavigatorProperties()
+ else
+  if(navigator.appName=="Microsoft Internet Explorer")
+   displayExplorerProperties()
+}
+displayBrowserProperties()
+</SCRIPT>
+</HEAD>
+<BODY>
+
+</BODY>
+</HTML>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<books>
+<book>
+<subject standard="class V">History</subject>
+<author>D.P.Mishra</author>
+<publisher>FGB</publisher>
+<price>Rs200/-</price>
+</book>
+
+<book>
+<subject standard="class IV">Math</subject>
+<author>P.K.Sharma</author>
+<publisher>FGB</publisher>
+<price>Rs100/-</price>
+</book>
+
+<book>
+<subject standard="class VI">English</subject>
+<author>T.P.Sastri</author>
+<publisher>FGB</publisher>
+<price>Rs150/-</price>
+</book>
+
+<book>
+<subject standard="class V">Geographt</subject>
+<author>P.Sharma</author>
+<publisher>FGB</publisher>
+<price>Rs240/-</price>
+</book>
+
+</books>

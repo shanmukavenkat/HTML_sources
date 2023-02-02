@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<SCRIPT type="text/javascript">
+
+			function getCookie(cname)
+			{
+				if (document.cookie.length>0)
+				{
+					cstart=document.cookie.indexOf(cname + "=");
+					if (cstart!=-1)
+					{
+					cstart=cstart + cname.length+1;
+					cend=document.cookie.indexOf(";",cstart);
+					if (cend==-1) cend=document.cookie.length;
+					return 
+ 					unescape(document.cookie.substring(cstart,cend));
+					}
+				}
+				return "";
+			}	
+			function setCookie(cname,value,expiredays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate()+expiredays);
+				document.cookie=cname+ "=" 
+ 				+escape(value)+((expiredays==null) ? 			
+ 				"" : ";expires="+exdate.toUTCString());
+			}
+			function checkCookie()
+			{
+				mycookie=getCookie('mycookie');
+				if (mycookie!=null && mycookie!="")
+				{
+				alert('Welcome again '+mycookie+'! \n The cookies has 					already been created.');
+				}
+				else
+				{
+					mycookie=prompt('Please enter your name:',"");
+					if (mycookie!=null && mycookie!="")
+					{
+						setCookie('mycookie',mycookie,30);
+					}
+				}
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<H1>Creating and Reading Cookies</H1>
+		<P>Click on the button to create the cookie: </P>
+		<INPUT type="button" onclick="checkCookie()" value="Create Cookie">
+	</BODY>
+</HTML>

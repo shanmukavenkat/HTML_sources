@@ -1,0 +1,21 @@
+<!DOCTYPE HTML >
+<HTML>
+<HEAD>
+<TITLE>Using the OUTPUT Element</TITLE>
+	<SCRIPT type="text/javascript">
+		function add()
+		{		
+		document.forms["form"]["resultadd"].value=23+123;
+		}
+	</SCRIPT>
+</HEAD>
+<BODY onload="add()">
+	<H1>OUTPUT Element.</H1>
+
+	<FORM name="form">
+		Adding the two numbers:
+		<OUTPUT name="resultadd">
+		</OUTPUT>
+	</FORM>
+	</BODY>
+</HTML>

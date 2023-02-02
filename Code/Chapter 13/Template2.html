@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Template Demo</TITLE>
+</HEAD>
+<BODY>
+<TABLE border=3>
+<TR>
+<TH>Bike Image</TH>
+<TH>Bike Color</TH>
+</TR>
+<TR>
+<TD>
+<IMG name="myimage01" src="bike5.jpg"/>
+<SCRIPT type="text/javascript">
+document.images.myimage01; 
+</SCRIPT>
+</TD>
+<TD>
+<SCRIPT type="text/javascript">
+	function bike(color) {
+		this.color=color;
+	}
+	var bike1= new bike("Red");
+	document.write(bike1.color);
+
+</SCRIPT>
+</TD>
+</TR>
+<TR>
+<TD>
+<IMG name="myimage02" src="bike2.jpg"/>
+<SCRIPT type="text/javascript">
+document.images.myimage02; 
+</SCRIPT>
+</TD>
+<TD>
+<SCRIPT type="text/javascript">
+	function bike(color) {
+		this.color=color;
+	}
+	var bike2= new bike("Black");
+	document.write(bike2.color);
+</SCRIPT>
+</TD>
+</TR>
+<TR>
+<TD>
+<IMG name="myimage03" src="bike3.jpg"/>
+<SCRIPT type="text/javascript">
+document.images.myimage03; 
+</SCRIPT>
+</TD>
+<TD>
+<SCRIPT type="text/javascript">
+	function bike(color) {
+		this.color=color;
+	}
+	var bike3= new bike("Blue");
+	document.write(bike3.color);
+</SCRIPT>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>    

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>online shopping</TITLE>
+		<SCRIPT language="JavaScript">
+			<!--
+			function order()
+			{
+				var order="Dear "
+				order = order + document.forms[0].Name.value
+				order = order + ", You have ordered an item with size "
+				if (document.forms[0].size.options[0].selected){
+					order = order + "small"
+				}
+				if (document.forms[0].size.options[1].selected){
+					order = order + "medium"
+				}
+				if (document.forms[0].size.options[2].selected){
+					order = order + "large"
+				}		
+				order = order + " and it will be delivered in a "
+				if (document.forms[0].packaging[0].checked){
+					order = order + "cardboard box"
+				}
+				if (document.forms[0].packaging[1].checked){
+					order = order + "styrofoam-insulated container"
+				}
+				order = order + " to the following address: "
+				order = order + document.forms[0].address. value
+				alert(order)
+			}
+			//-->
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<H1>Online Shopping</H1>
+		<FORM action="mailto:shopping@online.net" method="post"onSubmit="order()" enctype="text/plain">
+			Name:
+			<INPUT name="Name" size=20><BR>
+			Address:
+			<INPUT name="address" size=20><P>
+			Item size:<BR>
+			Size:
+			<SELECT name="size">
+				<OPTION>Small
+				<OPTION selected>Medium
+				<OPTION>Large
+			</SELECT><BR>
+			Packaging :<BR/>
+			<INPUT type=radio name="packaging">Cardboard box<BR>
+			<INPUT type=radio name="packaging">Styrofoam-insulated container<p>
+			<INPUT type=submit value="order">
+		</FORM>
+	</BODY>
+</HTML> 

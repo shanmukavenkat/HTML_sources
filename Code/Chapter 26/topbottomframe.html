@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>Creating Frames</TITLE>
+		<STYLE type="text/css">
+			#topframe{
+				position: absolute;
+				top:0px;
+				left:0px;
+				bottom: 0px; 
+				right:0;
+				width: 100%; 
+				height: 100px;
+				overflow: hidden; 
+				background: Black;
+				color: white;
+			}
+			#main{
+				position: fixed;
+				top: 100px; 
+				left:10px; 
+				bottom: 100px;
+				overflow: auto;
+			}
+			#bottomframe{
+				position: absolute;
+				left:0px;
+				bottom: 0px; 
+				right:0;
+				width: 100%; 
+				height: 100px;
+				overflow: hidden; 
+				background: Black;
+				color: white;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<DIV id="topframe">
+			<H1>This is the Top Frame</H1>
+		</DIV>
+		<DIV id="main">
+			<H1>Heading of the main content</H1>
+		<P>Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo 
+ 		Text Demo Text Demo Text Demo  		Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo 
+ 		Text Demo Text Demo Text Demo Text Demo Text Demo Text  		Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text 
+ 		Demo Text Demo Text Demo Text Demo Text Demo Text Demo  		Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo 
+ 		Text Demo Text Demo Text Demo Text Demo Text Demo Text  		Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text 
+ 		Demo Text Demo Text Demo Text Demo Text Demo Text Demo  		Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo 
+ 		Text Demo Text Demo Text Demo Text Demo Text Demo Text  		Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text Demo Text 
+ 		</P>
+			<IMG src="Penguins.jpg" style="width:500px;height:500px;">
+		</DIV>
+		<DIV id="bottomframe">
+			<H1>This is the Bottom Frame</H1>
+		</DIV>
+	</BODY>	
+</HTML> 

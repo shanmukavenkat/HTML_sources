@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating Time</TITLE>
+<SCRIPT type="text/javascript">
+
+function validateTime(thisform)
+{
+	var txtTime= thisform.time.value;
+	if(txtTime == "")
+	{		
+		alert("Please enter the Time");
+		thisform.time.focus();
+		return false;
+	}
+	var pos=txtTime.indexOf(":");
+	if(pos<0)
+	{
+		alert("Invalid Time!colon(:) is missing between HH and MM");
+		thisform.time.focus();
+		return false;
+	}
+	if(pos>2 || pos<1)
+	{
+		alert("Invalid Time! Time format should be HH:MM AM/PM");
+		thisform.time.focus();
+		return false;
+	}
+	var hours= txtTime.substring(0,pos);	
+	if(hours>12)
+	{
+		alert("Invalid Time! Hours cannot be greater than 12");
+		thisform.time.focus();
+		return false;
+	}	
+	if(hours<=0)
+	{
+		alert("Invalid Time! Hours cannot be smallar than 0");
+		thisform.time.focus();
+		return false;
+	}
+	var min=txtTime.substring(pos+1, pos+3);	
+	if(min>59)
+	{
+		alert("Invalid Time! Mins cannot be greater than 59");
+		thisform.time.focus();
+		return false;
+	}	
+	if(min<0)
+	{
+		alert("Invalid Time! Mins cannot be smallar than 0");
+		thisform.time.focus();
+		return false;
+	}
+	var t1  = txtTime.substring(5,8);	
+	if(t1!= "AM" && t1!= "am" && t1!="PM" && t1!= "pm")
+	{
+		alert("Invalid Time! time should be end with AM or PM");
+		thisform.time.focus();
+		return false;
+	}	
+	return true;	
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="ValidTime.html" onsubmit="return validateTime(this)" method="Post">
+Enter Time(HH:MM AM/PM):<INPUT type="text" name="time"/><BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>

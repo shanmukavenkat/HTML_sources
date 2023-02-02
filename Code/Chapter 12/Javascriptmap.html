@@ -1,0 +1,23 @@
+<!DOCUMENT HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Using javaScript in Image map</title>
+		<script type="text/javascript">
+			function details(txt)
+			{
+				document.getElementById("description").src=txt
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<IMG src ="flower.jpg" width ="300" height ="300" alt="flowers" usemap="#flowermap" />
+		<MAP name="flowermap">
+			<AREA shape ="rect" coords ="2,7,22,50" 	onmouseover="details('flower1.jpg')" />
+			<AREA shape ="circle" coords ="90,60,10" onmouseover="details('flower2.jpg')" />
+			<AREA shape ="circle" coords ="90,18,16" onmouseover="details('flower3.jpg')" />
+		</MAP> 
+		<BR>
+		<IMG id="description" width ="300" height ="300" >
+		<P id="description1"></P>
+	</BODY>
+</HTML>

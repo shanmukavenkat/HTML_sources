@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+	<META name="generator" content="HTML Tidy, see www.w3.org">    
+	<TITLE>Implementing Dojo</TITLE>
+	<SCRIPT language="JavaScript" src="scripts/dojo.js"></SCRIPT>
+	<SCRIPT language="JavaScript" src="scripts/dojo_p.js"></SCRIPT>
+	<SCRIPT language="JavaScript" type="text/javascript"> 
+	function retrieveUserPassword() {
+	id=document.getElementById("uid");
+		dojo.io.bind({
+			url: "/Dojo/userid?id=" + escape(id.value),
+			load: function(type, data, evt){
+				displayUserAndPassword(data); },
+			error: function(type, data, evt){
+				reportError(type,data,evt); },
+			mimetype: "text/plain"
+		});
+	}
+	function displayUserAndPassword(data){
+		var jsonData = data;
+		var myJSONObject = eval('(' + jsonData + ')');
+		if(myJSONObject.userpass.username== null)
+		{
+		var user = document.getElementById('user').value="";
+		var user = document.getElementById('password').value="";
+		alert('no entry in database for id: '+myJSONObject.userpass.id);
+		}
+		else
+		{
+ 			var user = document.getElementById
+ 
+ 			('user').value=myJSONObject.userpass.username;
+			var user = document.getElementById
+ 
+ 			('password').value=myJSONObject.userpass.password;
+		}
+	}
+	function reportError(type,data,evt) {
+		alert('error retrieving a Username and Password for that Id.');
+	}    
+	</SCRIPT>     
+</HEAD>
+<BODY>
+<H3>Enter User Id and it will retrieve Username and Password for the User</H3>
+<TABLE align="left" class="borderless">
+<TR>
+	<TD colspan="3">
+	<TABLE align="left" class="borderless">
+	<TR>
+		<TD class="headtext">                
+		</TD>
+	</TR>
+	</TABLE>
+	</TD>
+</TR>
+<TR>
+	<TD>User ID:</TD>
+	<TD align="left">
+	<INPUT type="text" id="uid" name="uid" onblur="retrieveUserPassword()" >
+	</TD>        
+</TR>
+<TR>
+	<TD>Username:</TD>
+	<TD align="left"><INPUT type="text" id="user" name="user"></TD>
+</TR>
+<TR>
+	<TD>Password:</TD>
+	<TD align="left"><INPUT type="text" id="password" name="password"></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+  <meta charset="utf-8">
+  <TITLE>Modernizr Use</title>
+  <SCRIPT src="modernizr-1.6.min.js"></script>
+</HEAD>
+<BODY>
+ <DIV id="music">
+   <AUDIO>
+      <SOURCE src="audio.mp3" />
+   </AUDIO>
+   <BUTTON id="play">Play</button>
+   <BUTTON id="pause">Pause</button>
+</DIV>
+ <SCRIPT>
+if (Modernizr.audio) {
+    alert("Your Browser supports audio."); 
+}else{
+     alert("Your Browser does not support audio."); 
+}
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<HEAD>
+
+<TITLE>Validating required fields</TITLE>
+<SCRIPT type="text/javascript">
+function validateReqFields(thisform)
+{
+	var userName=thisform.uname.value;
+	var password=thisform.pw.value;
+	if(userName==null || userName=="")
+	{
+		alert("Enter the User name");
+		thisform.uname.focus();
+		return false;
+	}
+	if(password==null || password=="")
+	{
+		alert("Enter the password");
+		thisform.pw.focus();
+		return false;
+	}
+
+	return true;	
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM action="Submit.html" onsubmit="return validateReqFields(this)" 	method="Post">
+User Name:<input type= "text" name="uname"/>*<br/>
+Password: <input type= "password" name="pw"/>*<br/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+
+</HTML>

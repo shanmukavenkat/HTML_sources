@@ -1,0 +1,23 @@
+<!DOCTYPE HTML >
+<HTML>
+<HEAD>
+<TITLE>Using the OUTPUT Element</TITLE>
+	<SCRIPT type="text/javascript">
+		function add()
+		{		
+		num1=parseInt(prompt("Enter first number.",0));
+		num2=parseInt(prompt("Enter second number.",0));
+		document.forms["form"]["resultadd"].value=num1+num2;
+		}
+	</SCRIPT>
+</HEAD>
+<BODY onload="add()">
+	<H1>OUTPUT Element.</H1>
+
+	<FORM name="form">
+		Adding the two numbers:
+		<OUTPUT name="resultadd">
+		</OUTPUT>
+	</FORM>
+	</BODY>
+</HTML>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<HEAD>
+<SCRIPT type="text/javascript" src="jquery-1.5.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+
+$( init );
+
+function init() {
+  $('#myButton').bind( 'click', animatepara );
+}
+
+function animatepara() {
+  $(myPara).fadeOut();
+  $(myPara).fadeIn();
+}
+
+</SCRIPT>
+
+</HEAD>
+<BODY>
+
+  <DIV>
+    <INPUT type="button" id="myButton" value="Click Me to Animate the  
+Paragraph"  />
+  </DIV>
+<DIV>
+<P id="myPara" style="background:lightgreen;">
+demo text demo text demo text demo text demo text demo text demo text demo  
+text demo text demo text demo text demo text demo text demo text demo text  
+demo text demo text demo text demo text demo text demo text demo text demo  
+text demo text demo text demo text demo text demo text demo text demo text  
+demo text demo text demo text demo text demo text demo text demo text demo  
+text demo text demo text demo text demo text demo text demo text demo text 
+</P>
+</DIV>
+
+</BODY>
+</HTML>

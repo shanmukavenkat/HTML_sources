@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TITLE>Form Validation Using Spry Widgets</TITLE>
+<LINK href="widgets/textfieldvalidation/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<LINK href="widgets/selectvalidation/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+<LINK href="widgets/textareavalidation/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
+<LINK href="widgets/checkboxvalidation/SpryValidationCheckbox.css" rel="stylesheet" type="text/css" />
+<LINK href="widgets/radiovalidation/SpryValidationRadio.css" rel="stylesheet" type="text/css" />
+<LINK href="validation.css" rel="stylesheet" type="text/css" media="all" />
+<SCRIPT type="text/javascript" src="widgets/textfieldvalidation/SpryValidationTextField.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="widgets/selectvalidation/SpryValidationSelect.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="widgets/textareavalidation/SpryValidationTextarea.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="widgets/checkboxvalidation/SpryValidationCheckbox.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="widgets/radiovalidation/SpryValidationRadio.js"></SCRIPT>
+</HEAD>
+<BODY>
+<NOSCRIPT><H1>This page requires JavaScript. Please enable JavaScript in your browser and reload this page.</H1></NOSCRIPT>
+<DIV id="wrap">
+<H1>Validation using Spry Framework</H1>
+<DIV id="CentralColumn">
+	<DIV id="articles">
+		<FORM id="form1" name="form1" method="get" action="index.html">
+		<DIV id="formregion">
+			
+		<DIV id="theUsername">
+			<DIV class="formLabel">Name:</DIV>
+			<INPUT name="yourName" type="text" id="yourName"  />
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+<SPAN class="textfieldRequiredMsg">Please enter your Name.</SPAN>
+		</DIV>
+		<DIV id="theDate">
+		<DIV class="formLabel">Date of Birth:</DIV>
+	<INPUT name="birthDate" type="text" id="birthYear" value="" />
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+<SPAN class="textfieldRequiredMsg">Please enter a date.</SPAN>
+<SPAN class="textfieldInvalidFormatMsg">Please enter a valid date (mm/dd/yyyy).</SPAN>
+		</DIV>
+		<DIV id="radios">
+			<DIV class="formLabel">Maritial Status:</DIV>
+			<LABEL for="yes_married">Yes
+<INPUT type="radio" name="maritialstatus" id="yes_married" value="Y"/></LABEL>
+			<LABEL for="no_married">No
+<INPUT type="radio" name="maritialstatus" id="no_married" value="N"/></LABEL>
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+			<SPAN class="radioRequiredMsg">Please specify a value.</SPAN>
+	</DIV>
+		<DIV id="theAddress">
+		 	<DIV class="formLabel">Address:</DIV>
+			<TABLE border="0">
+			<TR>
+				<TD valign="top" rowspan="2">
+<TEXTAREA name="yourAddress" id="yourAddress" cols="45" rows="5"></TEXTAREA>
+				</TD>
+				<TD valign="top" width="325">				
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+<SPAN class="textareaRequiredMsg">Please enter your Address.</SPAN>
+<SPAN class="textareaMinCharsMsg">Please enter at least 20 characters.</SPAN>
+				</TD>
+			</TR>
+			<TR>
+<TD valign="bottom"><span id="Countvalidta1">&nbsp;</SPAN> / 180</TD>
+			</TR>
+			</TABLE>
+		</DIV>
+		<DIV id="theRole">
+			<DIV class="formLabel">Your Role:</DIV>
+			<SELECT name="yourRole" id="yourRole">
+<OPTION value="" selected="selected">Please select</option>
+			<OPTION value="Java Programmer">Java Programmer</OPTION>
+<OPTION value="Senior Java Programmer">Senior Java Programmer</OPTION>
+			<OPTION value="HR Manager">HR Manager</OPTION>
+			<OPTION value="Team Leader">Team Leader</OPTION>
+			<OPTION value="Project Leader">Project Leader</OPTION>
+			<OPTION value="Project Manager">Project Manager</OPTION>
+			</SELECT>
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+		<SPAN class="selectRequiredMsg">Please select a Role.</SPAN>
+		</DIV>
+		<DIV id="checkboxes">
+			<DIV class="formLabel">Skills:</DIV>
+			<DIV class="validcheckbox">
+				<LABEL for="checkbox_1">Java SE</LABEL>
+				<DIV class="input_container">
+<INPUT type="checkbox" name="yourSkill" id="checkbox_1" value="1"/>
+				</DIV>
+			</DIV>
+			<DIV class="validcheckbox">
+				<LABEL for="checkbox_2">Java EE</LABEL>
+				<DIV class="input_container">
+<INPUT type="checkbox" name="yourSkill" id="checkbox_2" value="2"/>
+				</DIV>
+			</DIV>
+			<DIV class="validcheckbox">
+				<LABEL for="checkbox_3">Struts</LABEL>
+				<DIV class="input_container">
+<INPUT type="checkbox" name="yourSkill" id="checkbox_3" value="3"/>
+				</DIV>
+			</DIV>
+			<DIV class="validcheckbox">
+				<LABEL for="checkbox_4">Spring</LABEL>
+				<DIV class="input_container">
+<INPUT type="checkbox" name="yourSkill" id="checkbox_4" value="4"/>
+				</DIV>
+			</DIV>
+			
+			<DIV class="validcheckbox">
+				<LABEL for="checkbox_5">JSP/JSF</LABEL>
+				<DIV class="input_container">
+<INPUT type="checkbox" name="yourSkill" id="checkbox_5" value="5"/>
+				</DIV>
+			</DIV>
+			<DIV id="errors">
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+<SPAN class="checkboxRequiredMsg">Please select at least one skill.</SPAN>
+<SPAN class="checkboxMaxSelectionsMsg">Only a maximum of 3 skills can be selected.</SPAN>
+			</DIV>
+			<BR style="clear:both"/>
+		</DIV>
+		<DIV id="theRateskill">
+			<DIV class="formLabel">Rate your skills level:</DIV>
+			<SELECT name="Rating" id="skillsRating">
+				<OPTION value="">Please select</OPTION>
+				<OPTION value="5">*****</OPTION>
+				<OPTION value="4">****</OPTION>
+				<OPTION value="3">***</OPTION>
+				<OPTION value="2">**</OPTION>
+				<OPTION value="1">*</OPTION>
+			</SELECT>
+<IMG src="images/ok.gif" title="Valid" alt="Valid" class="validMsg" border="0"/>
+<SPAN class="selectRequiredMsg">Please Rate your skills.</SPAN>
+		</DIV>
+		<DIV class="buttons">
+<INPUT type="submit" name="Submit" id="submit" value="Submit"/>
+			<INPUT type="reset" name="Reset" id="reset" value="Reset" />
+		</DIV>
+	</DIV>
+	</FORM>
+</DIV>
+<DIV class="ClearAll">&nbsp;</DIV>
+</DIV>
+</DIV>
+<SCRIPT type="text/javascript">
+<!--
+var theUsername = new Spry.Widget.ValidationTextField("theUsername", "none", {useCharacterMasking:true, validateOn:["change"]});
+var theDate = new Spry.Widget.ValidationTextField("theDate", "date", {useCharacterMasking:true, format:"mm/dd/yyyy", hint:"mm/dd/yyyy", validateOn:["change"]});	
+var theRateskill = new Spry.Widget.ValidationSelect("theRateskill", {validateOn:["change"]});
+var theRole = new Spry.Widget.ValidationSelect("theRole", {validateOn:["change"]});
+var theAddress = new Spry.Widget.ValidationTextarea("theAddress", {useCharacterMasking:true, minChars:20, maxChars:180, counterType:"chars_count", counterId:"Countvalidta1", validateOn:["change"]});
+var checkboxes = new Spry.Widget.ValidationCheckbox("checkboxes", {validateOn:["change"], maxSelections:3});
+var dvdVersion = new Spry.Widget.ValidationRadio("radios", {validateOn:["change"]});
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

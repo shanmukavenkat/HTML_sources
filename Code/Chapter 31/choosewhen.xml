@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="choosewhen.xsl" ?>
+<orders>
+   <order>
+      <total>20</total>
+   </order>
+   <order>
+     <total>50</total>
+   </order>
+   <order>
+     <total>30</total>
+   </order>
+</orders>

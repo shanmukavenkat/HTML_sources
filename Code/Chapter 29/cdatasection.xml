@@ -1,0 +1,21 @@
+<?xml version='1.0' ?> 
+<!DOCTYPE Links [<!ELEMENT Links (Link+)> 
+<!ELEMENT Link (LinkURL, Heading, Body)> 
+<!ATTLIST Link BPid CDATA #REQUIRED> 
+<!ELEMENT LinkURL (#PCDATA)> 
+<!ELEMENT Heading (#PCDATA)> 
+<!ELEMENT Body (#PCDATA)>]> 
+<Links> 
+    <Link BPid='1001'> 
+        <LinkURL><![CDATA[http://www.abc.com/]]></LinkURL>          
+        <Body><![CDATA[Line 1 # Data showing CDATA use]]></Body> 
+    </Link> 
+    <Link BPid='1002'> 
+        <LinkURL><![CDATA[http://www.abc.com/]]></LinkURL>         
+        <Body><![CDATA[Line 2 # Data showing CDATA use]]></Body> 
+    </Link> 
+    <Link BPid='1003'> 
+        <LinkURL><![CDATA[http://www.abc.com/]]></LinkURL>         
+        <Body><![CDATA[Line 3 # Data showing CDATA use]]></Body> 
+    </Link> 
+</Links>

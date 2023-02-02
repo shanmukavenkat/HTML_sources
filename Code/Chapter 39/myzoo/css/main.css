@@ -1,0 +1,90 @@
+body {
+	font-family: Tahoma, serif;
+	background: lightblue;
+	margin: 0; padding: 0;
+}
+h1{
+	font-family: Georgia;
+	color:#f9b41e;
+	font-size:3em;
+	line-height:1em;
+	margin: 20px;
+	font-weight: bold;
+	vertical-align:top;
+}
+h2{
+	font-family: Georgia;
+	color:#fff;
+	font-size:24px;
+	font-weight: bold;
+	margin: 5px;
+}
+#page-wrap{
+	position:relative;
+	width:800px;
+	height: 550px;
+	margin: 0 auto;
+	padding: 10px;
+	background: green;
+}
+.functions {
+	clear: both;
+	margin: 20px 10px; padding: 5px 10px 10px 10px;
+	border: 2px solid #f9b41e;
+	background-color: yellowgreen;
+}
+.functions input {
+	margin: 3px 10px; padding: 0 10px;
+	font-family:"Arial";
+	font-size: 15px;
+}
+#load-div input {
+	float: left;
+}
+.functions span {
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 2em;
+}
+#load-div span {
+	float: left;
+	margin-right: 30px;
+}
+#load-div {
+	width: 760px;
+	height: 25px;
+}
+#get-script-div {
+	width: 120px;
+}
+#get-div {
+	width: 120px;
+}
+#post-div {
+	width: 120px;
+}
+#result {
+	position: absolute;
+	bottom: 36px;
+	right: 8px;
+	width: 600px;
+	height: 328px;
+	background: none;
+	padding: 10px;
+}
+.loading {
+	position: absolute;
+	top: 160px; left: 300px;
+}
+#result p {
+	font-family: Georgia;
+	color: #fff;
+	font-size: 1.2em;
+	margin: 5px;
+}
+#picture {
+	float: right;
+	margin: 10px;
+
+}

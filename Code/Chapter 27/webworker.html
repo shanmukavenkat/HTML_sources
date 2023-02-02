@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<HEAD>
+  <TITLE>Worker example</TITLE>
+ </HEAD>
+ <BODY style="background-color:gold;">
+ <H3>The highest prime number discovered so far is: <OUTPUT id="result"></OUTPUT></H3>
+  <SCRIPT>
+   var worker = new Worker('worker.js');
+   worker.onmessage = function (event) {
+document.getElementById('result').textContent = event.data;
+   };
+  </SCRIPT>
+ </BODY>
+
+</HTML>

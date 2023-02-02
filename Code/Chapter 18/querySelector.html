@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE> Working with querySelector </TITLE>
+	</HEAD>
+	<BODY>
+		<H1>Working with querySelector</H1>
+		<div id="div1" style="padding:50px; width:100px; height:100px; border:1px 			solid black">
+		</div> 
+		<P>Move the mouse cursor over the color name</P>
+		<LABEL id="label1" >Blue</LABEL>--
+		<LABEL id="label2" >Red</LABEL>--
+		<LABEL id="label3" >Yellow</LABEL>--
+		<INPUT id="text">
+		<script type="text/javascript">
+			if (document.querySelector)
+			{
+				var lbl1=document.querySelector('#label1')
+				var lbl2=document.querySelector('#label2')
+				var lbl3=document.querySelector('#label3')
+
+				lbl1.onmouseover=function(){
+				document.querySelector('#text').value="This is Blue color";
+				document.querySelector('#text').style.color="blue";
+				document.querySelector('#div1').style.background="blue"
+				}
+				lbl2.onmouseover=function(){
+				document.querySelector('#text').value="This is Red color";
+				document.querySelector('#text').style.color="red"
+				document.querySelector('#div1').style.background="red"
+				}
+				lbl3.onmouseover=function(){
+				document.querySelector('#text').value="This is Yellow 					color";
+				document.querySelector('#text').style.color="yellow"
+				document.querySelector('#div1').style.background="yellow"
+				}
+			}
+		</script>
+	</BODY>
+</HTML>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Closures</TITLE>
+	</HEAD>
+	<BODY>
+		<H1>Using the Function Scope and Closure</H1>
+		<SCRIPT language="JavaScript">
+
+			// call function to display greeting message
+			Showmessage();
+
+			// "Hello, World" function
+			function Showmessage()
+			{
+				// declaring new variables
+				var date = new Date();
+				var hour = date.getHours();
+				var min = date.getMinutes();
+				var month = date.getMonth() + 1
+				var day = date.getDate()
+				var year = date.getFullYear()
+				
+
+				// call DisplayGreeting 
+				Display();
+
+				// display greeting
+				function Display()
+				{
+					if (hour >= 22 || hour <= 5) 
+						document.write("Goodnight, world!  BR/>");
+					else
+						document.write("Hello, world! <BR/>");
+
+					document.write ("Today is " + month + "/" + day + "/" + year + "<BR/>");
+					document.write ("The current time is " + hour + ":" + min );
+				}
+			}
+		</SCRIPT>
+	</BODY>
+</HTML> 

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Song xmlns="http://www.namespace.com/Song"
+   xmlns:art="http://www.webucator.com/Artist">
+ <Title>The Girl Is Mine</Title>
+
+<Year>1983</Year>
+ <Artists>
+
+ <art:Artist BirthYear="1955">
+   <art:Name>
+    <art:Title>Mr.</art:Title>
+    <art:FirstName>Ahmad</art:FirstName>
+    <art:LastName>Umar</art:LastName>
+   </art:Name>
+
+  </art:Artist>
+  <art:Artist BirthYear="1942">
+
+   <art:Name>
+    <art:Title>Mr.</art:Title>
+    <art:FirstName>Mohit</art:FirstName>
+    <art:LastName>Saxena</art:LastName>
+   </art:Name>
+
+  </art:Artist>
+
+ </Artists>
+</Song>

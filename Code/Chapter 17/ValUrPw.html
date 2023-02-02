@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating User Name and Password</TITLE>
+<SCRIPT type="text/javascript">
+
+function validateUrPw(thisform)
+{
+	var userName= thisform.uname.value;
+	var pass1= thisform.pw1.value;
+	var pass2= thisform.pw2.value;
+	if(userName=="")
+	{
+		alert("Please enter the user name");	
+		thisform.uname.focus();
+		return false;
+
+	}
+		if(userName.length<6)
+	{
+		alert("User name must be of atleast six characters");	
+		thisform.uname.focus();
+		return false;
+	}
+
+	if(pass1=="")
+	{
+		alert("Please enter the password");	
+		thisform.pw1.focus();
+		return false;
+	}
+
+	if(pass1.length<8)
+	{
+		alert("Password must contain atleast 8 digits");	
+		thisform.pw1.focus();
+		return false;
+	}
+
+	if(pass2=="")
+	{
+		alert("Please enter the confirm password");	
+		thisform.pw2.focus();
+		return false;
+	}
+
+	if(pass2.length<8)
+	{
+		alert("Confirm password must contain atleast 8 digits");	
+		thisform.pw2.focus();
+		return false;
+	}
+
+	if(pass1.length>=8 && pass2.length>=8 )
+	{
+		if(pass1!=pass2)
+		{
+			alert("Password mismatched! enter the correct password!");	
+			return false;
+		}
+	}	
+		return true;	
+}
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<FORM action="UserDetails.html" onsubmit="return validateUrPw(this)" 	method="Post">
+
+User Name:<INPUT type="text" name="uname"/><BR/>
+Password:<INPUT type="password" name="pw1"/><BR/>
+Confirm-Password:<INPUT type="password" name="pw2"/><BR/>
+<INPUT type="submit" value="submit"/>
+
+</FORM>
+</BODY>
+</HTML>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>Fixed Table Layout</TITLE>
+		<STYLE type='text/css'>
+			table,td{
+				border: 1px solid black;
+			}
+
+			.flayout{
+				table-layout:fixed;
+			}
+
+			.f1{
+				width:200px;
+			}
+
+			.f2{
+				width:50px;
+			}
+
+			.f3{
+				width:400px;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<H1>Working with Fixed Table Layout </H1>
+		<TABLE class="flayout">
+			<TR>
+				<TD class="f1">Column 1</TD>
+				<TD class="f2">Column 2</TD>
+				<TD class="f3">Column 3</TD>
+			</TR>
+			<TR>
+				<TD>This column is 200px wide. </TD>
+				<TD>This column is 50px wide.</TD>
+				<TD>This column is 400px wide.</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>

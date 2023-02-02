@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>JavaScript-Ajax Application</TITLE>
+<SCRIPT language = "javascript">
+var XMLHttpRequestObject = false;
+
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+function getDateTime(datetimefile, divID)
+{
+if(XMLHttpRequestObject) {
+var obj = document.getElementById(divID);
+XMLHttpRequestObject.open("POST", datetimefile);
+XMLHttpRequestObject.onreadystatechange = function()
+{
+if (XMLHttpRequestObject.readyState == 4 &&XMLHttpRequestObject.status == 200) {
+obj.innerHTML =XMLHttpRequestObject.responseText;
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H1>JavaScript-Ajax Application</H1>
+<FORM>
+<INPUT type = "button" value = "Get Current Date and Time"
+onclick = "getDateTime('datetime.jsp', 'targetDiv')">
+</FORM>
+<DIV id="targetDiv">
+</DIV>
+</BODY>
+</HTML>

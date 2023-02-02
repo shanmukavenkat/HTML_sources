@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Validating Time</TITLE>
+<SCRIPT type="text/javascript">
+function validateCC(thisform)
+{
+	var cardNum = thisform.CNum.value;
+	var cardType= thisform.CType.value;	
+	if (cardType=="sc")
+	{
+		alert ("Please select the card");
+		thisform.CType.focus();
+		return false;
+	}
+	if (cardNum=="")	
+	{
+		alert ("Enter your credit card number");
+		thisform.CNum.focus();
+		return false;
+	}
+	if (isNaN(cardNum))
+	{
+		alert ("it’s not an integer");
+		thisform.CNum.focus();
+		return false;
+	}
+	switch (cardType)	
+	{
+		case"Master Card": var c   = cardNum.substring(0,2);
+			if (cardNum.length!=16 ||c<51|| c>55)
+			{
+			alert ("Invalid Master card Number");
+				thisform.CNum.focus();
+				return false;
+			    }
+					break;
+		 			case"Visa": var c   = cardNum.substring (0,1);
+			    if (cardNum.length!=16 && cardNum.length!=13 ||c!=4)
+			     {
+					alert ("Invalid visa Number");
+					thisform.CNum.focus();
+					return false;
+			     }
+					break;
+		 			case"Amex": var c   = cardNum.substring(0,2);
+					if (cardNum.length!=15 || c<34 ||c>37)
+					{
+						alert ("Invalid Amex Number");
+						thisform.CNum.focus();
+						return false;
+			    		}
+						break;
+	}	
+	return true;
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM action="ValidCard.html" onsubmit="return validateCC(this)" method="Post">
+Card Type :<SELECT name= "CType">
+<OPTION value="sc" selected> Select Card
+<OPTION value="Master Card">Master Card
+<OPTION value="Visa">Visa
+<OPTION value="Amex">American Express
+</SELECT><BR/>
+Card Number :<INPUT type="text" name="CNum"><BR/>
+<INPUT type="submit" value="submit"/>
+</FORM>
+</BODY>
+</HTML>

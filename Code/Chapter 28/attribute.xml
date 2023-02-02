@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Employees>
+	<FirstName>Ambrish</FirstName>
+	<MiddleName/>
+	<LastName title="Singh"></LastName>
+	<Birthday date="&lt;24/01/1982&gt;"></Birthday>
+</Employees>

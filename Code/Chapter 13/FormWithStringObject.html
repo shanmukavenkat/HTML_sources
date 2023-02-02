@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Form with Sting Object</TITLE>
+</HEAD>
+<BODY style="background-color:orange">
+<H3>Enter your text in the given text area</H3>
+<FORM name="wordcount">
+<TEXTAREA rows="12" name="wordcount2" cols="38" wrap="virtual" style="color:pink;background-color:blue;font-size:20px"></textarea><br>
+<INPUT type="button" value="Calculate Words" onClick="countit()">
+<INPUT type="text" name="wordcount3" size="20">
+</FORM>
+<SCRIPT type="text/javascript">
+function countit(){
+var formcontent=document.wordcount.wordcount2.value
+formcontent=formcontent.split(" ")
+document.wordcount.wordcount3.value=formcontent.length
+}
+</SCRIPT>
+</BODY>
+</HTML>

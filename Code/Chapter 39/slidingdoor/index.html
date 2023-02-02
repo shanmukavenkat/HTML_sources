@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Door effect</TITLE>
+<STYLE type='text/css'>    
+    .box_container{
+    position:relative; 
+    width:260px; 
+    height:260px; 
+    overflow:hidden; 
+    background: black;
+    color:white;
+    }
+    .images_holder{
+    position:absolute; 
+    }
+    .image_div {
+        position:relative; 
+        overflow:hidden; 
+        width:50%; 
+        float:left; 
+    }
+    .right img{
+        margin-left: -100%; 
+    }
+    .clear{
+        clear:both;    
+    }
+.box_container2{
+    position:relative; 
+    width:450px; 
+    height:220px; 
+    overflow:hidden;
+    background: black;
+    color:white;
+    }
+    .images_holder2{
+    position:absolute;
+    }
+    .image_div2 {
+        position:relative;
+        overflow:hidden; 
+        width:50%; 
+        float:left; 
+    }
+    .right2 img{
+        margin-left: -100%; 
+    }
+    </STYLE>
+<SCRIPT type='text/javascript' src='js/jquery-1.5.js'></SCRIPT>
+<SCRIPT type='text/javascript' src='js/easing.js'></SCRIPT>
+<SCRIPT type='text/javascript'>
+$(document).ready(function() {
+          $('.box_container').hover(function(){
+            var width = $(this).outerWidth() / 2;
+            $(this).find('.left').animate({ right : width },{queue:false,duration:300});
+            $(this).find('.right').animate({ left : width },{queue:false,duration:300});
+        }, function(){
+            $(this).find('.left').animate({ right : 0 },{queue:false,duration:300});
+            $(this).find('.right').animate({ left : 0 },{queue:false,duration:300});
+        });
+                $('.box_container2').hover(function(){
+                        var width = $(this).outerWidth() / 2;
+                        $(this).find('.left2').animate({ right : width },{easing: 'easeOutBounce', queue:false,duration:1000});
+            $(this).find('.right2').animate({ left : width },{easing: 'easeOutBounce', queue:false,duration:1000});
+        }, function(){
+                        $(this).find('.left2').animate({ right : 0 },{easing: 'easeOutBounce',queue:false,duration:1000});
+            $(this).find('.right2').animate({ left : 0 },{easing: 'easeOutBounce',queue:false,duration:1000});
+                    });
+               });
+</SCRIPT>
+</HEAD>
+<BODY>
+<H1>Door Effect Demo</H1>
+<DIV class='box_container'>
+                <DIV class='images_holder'>
+                        <DIV class='image_div left'><IMG class='box_image' src='img.jpg'/></DIV>
+            <DIV class='image_div right'><IMG class='box_image' src='img.jpg'/></DIV>
+                        <DIV class='clear'></DIV>            
+        </DIV>       
+        Welcome to jQuery :)        
+</DIV>
+</BODY>
+</HTML>

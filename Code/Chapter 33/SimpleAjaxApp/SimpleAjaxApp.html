@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Simple AJAX Application</TITLE>
+<SCRIPT language = "javascript">
+	var XMLHttpRequestObj = false;
+	if (window.XMLHttpRequest) 
+	{
+		XMLHttpRequestObj = new XMLHttpRequest();
+	}
+
+	else if (window.ActiveXObject) 
+	{
+XMLHttpRequestObj = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	function loadXMLDoc(dataSource, divID)
+	{
+		if(XMLHttpRequestObj) 
+		{
+			var obj = document.getElementById(divID);
+			XMLHttpRequestObj.open("GET", dataSource);
+ XMLHttpRequestObj.onreadystatechange = function() {			
+if (XMLHttpRequestObj.readyState == 4 && XMLHttpRequestObj.status == 200) 
+				{
+					obj.innerHTML = XMLHttpRequestObj.responseText;
+				}
+			}
+
+			XMLHttpRequestObj.send(null);
+		}
+	}
+</SCRIPT>
+</HEAD> 
+<BODY>
+<DIV id="myDiv"><H2>Let AJAX change this text</H2></DIV>
+<BUTTON type="button" onclick="loadXMLDoc('msg.xml','myDiv')">Change 	Content</BUTTON>
+</BODY>
+</HTML>

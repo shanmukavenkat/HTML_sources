@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+	<HEAD>		
+		<TITLE>AJAX and jQuery Application</TITLE>
+<LINK rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8" />
+<LINK rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+	</HEAD>
+	<BODY>
+    	<DIV id="page-wrap">
+    		<DIV id="header">
+    			<H1>AJAX Calls with jQuery</H1>
+    		</DIV>			
+			<DIV id="load-div" class="functions">
+				<INPUT type="submit" value="Home" id="load_basic" />
+				<INPUT type="submit" value="Monkey" id="load_dom" />
+				<INPUT type="submit" value="Lion" id="load_get" />
+				<INPUT type="submit" value="Elephant" id="load_post" />
+				<INPUT type="submit" value="Rhinoceros" id="load_callback" />
+			</DIV>						
+			<DIV id="get-script-div"  class="functions">				
+				<INPUT type="submit" value="Peacock" id="getScript" />
+			</DIV>			
+			<DIV id="get-div"  class="functions">				
+				<INPUT type="submit" value="Zebra" id="get" />
+			</DIV>			
+			<DIV id="post-div" class="functions">				
+				<INPUT type="submit" value="Giraffe" id="post" />
+			</DIV>			
+			<DIV id="result"  class="functions">				
+			</DIV>
+		</DIV>		
+<SCRIPT type="text/javascript" src="jquery-1.5.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+	$.ajaxSetup ({
+		cache: false
+	});
+	var ajax_load = "<img class='loading' src='progress.gif' alt='Please wait...' />";	
+//	load() functions
+	var loadUrl = "zoo.php";
+var loadUrl2 = "monkey.php";
+var loadUrl3 = "lion.php";
+var loadUrl4 = "elephant.php";
+var loadUrl5 = "rhino.php";
+var loadUrl6 = "peacock.php";
+var loadUrl7 = "zebra.php";
+var loadUrl8 = "giraffe.php";
+	$("#load_basic").click(function(){
+		$("#result").html(ajax_load).load(loadUrl);
+	});	
+	$("#load_dom").click(function(){
+		$("#result")
+			.html(ajax_load)
+			.load(loadUrl2 + "#picture");
+	});	
+	$("#load_get").click(function(){
+		$("#result")
+			.html(ajax_load)
+			.load(loadUrl3, "language=php&version=5");
+	});	
+	$("#load_post").click(function(){
+		$("#result")
+			.html(ajax_load)
+			.load(loadUrl4, {language: "php", version: 5});
+	});	
+	$("#load_callback").click(function(){
+		$("#result")
+			.html(ajax_load)
+			.load(loadUrl5, null, function(responseText){
+				$("#result").html(responseText);
+			});
+	});
+//	$.getScript()	
+	$("#getScript").click(function(){
+		$("#result").html(ajax_load);
+		$.getScript(loadUrl6, function(responseText){
+			$("#result").html(responseText);
+		});
+	});
+//	$.get()
+	$("#get").click(function(){
+		$("#result").html(ajax_load);
+		$.get(
+			loadUrl7,
+			{language: "php", version: 5},
+			function(responseText){
+				$("#result").html(responseText);
+			},
+			"html"
+		);
+	});	
+//	$.post()
+	$("#post").click(function(){
+		$("#result").html(ajax_load);
+		$.post(
+			loadUrl8,
+			{language: "php", version: 5},
+			function(responseText){
+				$("#result").html(responseText);
+			},
+			"html"
+		);
+	});
+</SCRIPT>
+	</BODY>
+</HTML>

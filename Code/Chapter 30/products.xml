@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PRODUCTDATA>
+	<PRODUCT>
+		<PRODID>P001</PRODID>
+		<PRODUCTNAME>Barbie Doll</PRODUCTNAME>
+		<DESCRIPTION> This toy is for the children about 3 years of age</DESCRIPTION>
+		<PRICE>$24.00</PRICE>
+		<QUANTITY>12</QUANTITY>
+	</PRODUCT>
+	<PRODUCT>
+		<PRODID>P002</PRODID>
+		<PRODUCTNAME>Mini Bus</PRODUCTNAME>
+		<DESCRIPTION>This is a toy for children in the age group of 5-10 years </DESCRIPTION>
+		<PRICE>$42.00</PRICE>
+		<QUANTITY>6</QUANTITY>
+	</PRODUCT>
+	<PRODUCT>
+		<PRODID>P003</PRODID>
+		<PRODUCTNAME>Car</PRODUCTNAME>
+		<DESCRIPTION>This is a toy for children in the age group of 10-15 years </DESCRIPTION>
+		<PRICE>$60.00</PRICE>
+		<QUANTITY>21</QUANTITY>
+	</PRODUCT>
+</PRODUCTDATA>

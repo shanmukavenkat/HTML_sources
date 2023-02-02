@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+	<HEAD>
+		<TITLE>checking the node type</TITLE>
+		<SCRIPT type="text/javascript">
+
+			function checkNodeType()
+			{
+				var tag=document.getElementById("T1");
+				var value= tag.nodeType;
+				if(value== 1)
+					document.write("This is the Element Node type");
+				if(value== 2)
+					document.write("This is the Attribute Node type");
+				if(value== 3)
+					document.write("This is the Text Node type");
+				if(value== 8)
+					document.write("This is the Comment Node type");
+				if(value== 9)
+					document.write("This is the Document Node type");	
+			}
+
+		</SCRIPT>
+	</HEAD>
+
+	<BODY>
+		<H1>Checking the DOM Node Type</H1>
+		<P id="T1"> Welcome to the world of DOM</P>
+		<INPUT type= "button" onclick="checkNodeType();" value="Check Node Type!">
+	</BODY>
+
+</HTML>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root>
+
+<table xmlns="http://www.namespace.com/furniture">
+  <name>African Coffee Table</name>
+  <width>80</width>
+  <length>120</length>
+
+</table>
+</root>

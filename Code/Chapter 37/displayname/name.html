@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<HEAD><TITLE> A simple example of AJAX and PHP</TITLE></HEAD>
+<BODY>
+<SCRIPT type="text/javascript">
+var http = false;
+if(navigator.appName == "Microsoft Internet Explorer") {
+	http = new ActiveXObject("Microsoft.XMLHTTP");
+}
+else
+{
+	http = new XMLHttpRequest();
+}
+function validate(name)
+{
+	http.abort();
+	http.open("GET", "displayname.php?name=" + name, true);
+	http.onreadystatechange=function()
+	{
+		if(http.readyState == 4)
+		{
+			document.getElementById('res').innerHTML = http.responseText;
+		}
+	}
+	http.send(null);
+}
+</SCRIPT>
+<H2>
+Enter your name in lower case
+</H2>
+<FORM>
+	<input type="text" name="name" onkeyup="validate(this.value)"/>
+<BR><BR>
+
+<div id="res"></div>
+</FORM>
+
+
+</BODY>
+</HTML>

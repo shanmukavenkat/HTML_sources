@@ -1,0 +1,13 @@
+<!DOCTYPE HTML >
+<HTML>
+<HEAD>
+<TITLE>Using Hidden fields</TITLE>
+</HEAD>
+<BODY>
+<FORM>
+User name:<INPUT id="name" type="text"/><BR/>
+<INPUT type="hidden" id="country" value="India" /><BR/>
+<INPUT type="submit" onclick="alert('Hello, ' + document.getElementById('name').value + ' from '+ document.getElementById('country').value)" value="Submit">
+</FORM>
+</BODY>
+</HTML>
